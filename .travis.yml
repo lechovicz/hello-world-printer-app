@@ -8,4 +8,5 @@ install:
 script:
   - make test
 after success:
-  - PASSbWORD=$DOCKER_PASSWORD make docker_build
+  - make docker_build
+  - PASSWORD=${DOCKER_PASSWORD} make docker_build
